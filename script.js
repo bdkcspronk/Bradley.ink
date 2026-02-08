@@ -5,10 +5,30 @@ const contactForm = document.getElementById('contact-form');
 const formMessage = document.getElementById('form-message');
 
 if (contactForm && formMessage) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    formMessage.textContent = 'Thanks! Your message has been received.';
-    contactForm.reset();
+    formMessage.textContent = 'Sending...';
+
+    try {
+      const formData = new FormData(contactForm);
+      const body = new URLSearchParams(formData).toString();
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
+      formMessage.textContent = 'Thanks! Your message has been received.';
+      contactForm.reset();
+    } catch (error) {
+      formMessage.textContent =
+        'Sorry, something went wrong. Please try again.';
+    }
   });
 }
 

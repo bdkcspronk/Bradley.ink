@@ -167,8 +167,13 @@
             name="contact"
             method="POST"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="contact" />
+            <div class="sr-only">
+              <label for="bot-field">Leave this field empty</label>
+              <input id="bot-field" name="bot-field" type="text" />
+            </div>
 
             <label for="name">Name</label>
             <input id="name" type="text" name="name" autocomplete="name" required />
