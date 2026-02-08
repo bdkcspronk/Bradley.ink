@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bradley Ink | 3D & 2D Designer</title>
+    <meta
+      name="description"
+      content="Portfolio website for Bradley Ink, featuring 3D design in Blender and 2D design in Adobe Illustrator."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">Bradley Ink</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Designer Portfolio</p>
+            <h1>3D and 2D design built for clear visual communication.</h1>
+            <p class="lead">
+              I’m a multidisciplinary designer with <strong>20 years of Blender experience</strong>
+              and <strong>10 years in Adobe Illustrator</strong>, with a Bachelor’s degree in
+              Theoretical Physics.
+            </p>
+            <p class="lead">
+              I focus on practical, polished visuals for product imagery, illustration, and
+              hybrid 2D/3D work.
+            </p>
+            <a class="btn" href="portfolio.html">Open Portfolio Page</a>
+          </div>
+          <aside class="hero-card">
+            <h2>At a glance</h2>
+            <ul>
+              <li>3D: modeling, shading, lighting, rendering</li>
+              <li>2D: vector illustration, iconography, brand assets</li>
+              <li>Background: Theoretical Physics (BSc)</li>
+              <li>Workflow: brief, iterate, deliver</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container narrow">
+          <h2>About</h2>
+          <p>
+            I work across both visual ideation and production, combining artistic direction with
+            technical consistency. My process is simple: define goals, test options, then refine
+            toward the final output.
+          </p>
+        </div>
+      </section>
+
+      <section id="expertise" class="section alt-bg">
+        <div class="container">
+          <h2>Expertise</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>3D Design (Blender)</h3>
+              <p>Modeling, surfacing, look development, and render-ready composition.</p>
+            </article>
+            <article class="card">
+              <h3>2D Design (Illustrator)</h3>
+              <p>Vector illustration, icon systems, and clear visual hierarchy.</p>
+            </article>
+            <article class="card">
+              <h3>Project Direction</h3>
+              <p>Structured execution from initial concept to final delivery assets.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container narrow">
+          <h2>Contact</h2>
+          <p>Share your project brief, timeline, and deliverables and I’ll reply with next steps.</p>
+          <form class="contact-form" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Project Details
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Bradley Ink — 3D & 2D Design.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
