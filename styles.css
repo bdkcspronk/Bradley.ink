@@ -206,6 +206,55 @@ h2 {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+.section-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(250px, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.media-placeholder {
+  background: linear-gradient(165deg, rgba(18, 30, 60, 0.85), rgba(9, 16, 35, 0.9));
+  border: 1px dashed rgba(133, 176, 255, 0.55);
+  border-radius: 14px;
+  min-height: 190px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: var(--muted);
+}
+
+.inline-placeholder {
+  min-height: 120px;
+  margin-top: 0.9rem;
+}
+
+.placeholder-caption {
+  margin-top: 0.3rem;
+  font-size: 0.92rem;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #c9d8ff;
+  font-weight: 600;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--accent);
+}
+
 .card:hover,
 .card:focus-within,
 .hero-card:hover,
@@ -396,7 +445,9 @@ button:focus-visible {
 @media (max-width: 860px) {
   .hero-grid,
   .cards,
-  .about-grid {
+  .about-grid,
+  .section-grid,
+  .portfolio-grid {
     grid-template-columns: 1fr;
   }
 
