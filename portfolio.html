@@ -6,15 +6,23 @@
     <title>Portfolio | Bradley Ink</title>
     <meta
       name="description"
-      content="Portfolio overview for Bradley Ink featuring 3D and 2D design capabilities."
+      content="Portfolio overview for Bradley Ink featuring 3D visualization, 2D design systems, and process-oriented project delivery."
     />
+    <meta property="og:title" content="Portfolio | Bradley Ink" />
+    <meta
+      property="og:description"
+      content="View selected Bradley Ink projects with visual thumbnails and production highlights."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bradley.ink/portfolio.html" />
+    <meta property="og:image" content="https://bradley.ink/assets/thumb-2d.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html">Bradley Ink</a>
-        <nav>
+        <nav aria-label="Main navigation">
           <ul class="nav-links">
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#expertise">Expertise</a></li>
@@ -31,46 +39,45 @@
           <p class="eyebrow">Portfolio</p>
           <h1>Selected directions and production strengths.</h1>
           <p class="lead">
-            This page outlines the type of work I develop across 3D and 2D design.
-            Full case studies and visual examples can be expanded as projects are
-            published.
+            Browse project categories below and hover each item for a quick preview.
+            Click any thumbnail to open an expanded lightbox view.
           </p>
         </div>
       </section>
 
       <section class="section alt-bg">
         <div class="container">
-          <div class="cards">
-            <article class="card">
+          <div class="cards portfolio-cards">
+            <article class="card portfolio-item">
+              <button class="lightbox-trigger" data-image="assets/thumb-3d.svg" data-title="3D Projects preview">
+                <img src="assets/thumb-3d.svg" alt="Thumbnail preview of 3D visualization projects" loading="lazy" />
+                <span class="overlay">Environment studies, look development, and render composition.</span>
+              </button>
               <h2>3D Projects</h2>
-              <p>
-                Environment studies, object visualization, and stylized or
-                realistic asset workflows developed in Blender.
-              </p>
               <ul>
                 <li>Hard-surface and organic modeling</li>
                 <li>Lighting and material exploration</li>
                 <li>Render-ready composition</li>
               </ul>
             </article>
-            <article class="card">
+            <article class="card portfolio-item">
+              <button class="lightbox-trigger" data-image="assets/thumb-2d.svg" data-title="2D Projects preview">
+                <img src="assets/thumb-2d.svg" alt="Thumbnail preview of 2D identity system projects" loading="lazy" />
+                <span class="overlay">Identity systems, iconography, and scalable editorial diagrams.</span>
+              </button>
               <h2>2D Projects</h2>
-              <p>
-                Vector-based systems and illustration work developed in Adobe
-                Illustrator for brands, publications, and digital platforms.
-              </p>
               <ul>
                 <li>Identity and iconography sets</li>
                 <li>Technical and editorial diagrams</li>
                 <li>Scalable visual language development</li>
               </ul>
             </article>
-            <article class="card">
+            <article class="card portfolio-item">
+              <button class="lightbox-trigger" data-image="assets/thumb-process.svg" data-title="Research and process preview">
+                <img src="assets/thumb-process.svg" alt="Thumbnail preview of research and process workflow" loading="lazy" />
+                <span class="overlay">Structured iteration, reviews, and delivery-ready asset organization.</span>
+              </button>
               <h2>Research & Process</h2>
-              <p>
-                Concept framing and iterative production guided by references,
-                analysis, and structured reviews.
-              </p>
               <ul>
                 <li>Reference and benchmark collection</li>
                 <li>Drafting and critique cycles</li>
@@ -80,6 +87,12 @@
           </div>
         </div>
       </section>
+
+      <dialog id="lightbox" class="lightbox" aria-label="Project preview dialog">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close preview">×</button>
+        <img id="lightbox-image" src="" alt="Expanded project preview" />
+        <p id="lightbox-caption"></p>
+      </dialog>
     </main>
 
     <footer class="site-footer">

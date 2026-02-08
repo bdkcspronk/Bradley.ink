@@ -1,0 +1,6 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 360' role='img'>
+  <rect width='600' height='360' fill='#0f172a'/>
+  <circle cx='120' cy='80' r='70' fill='#1d4ed8' opacity='0.6'/>
+  <polygon points='300,70 460,140 460,290 300,220 140,290 140,140' fill='#93c5fd' stroke='#eff6ff' stroke-width='4'/>
+  <text x='40' y='320' fill='#e2e8f0' font-size='34' font-family='Arial'>3D Visualization</text>
+</svg>
