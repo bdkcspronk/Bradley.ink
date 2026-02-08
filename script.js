@@ -5,41 +5,13 @@ const contactForm = document.getElementById('contact-form');
 const formMessage = document.getElementById('form-message');
 
 if (contactForm && formMessage) {
-  contactForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    formMessage.textContent = 'Sending...';
-
-    try {
-      const formData = new FormData(contactForm);
-      const formName = contactForm.getAttribute('name');
-      if (formName && !formData.has('form-name')) {
-        formData.append('form-name', formName);
-      }
-      const body = new URLSearchParams(formData).toString();
-      const action = contactForm.getAttribute('action') || '/';
-
-      const response = await fetch(action, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body,
-      });
-
-      const isSuccess =
-        response.ok ||
-        response.type === 'opaqueredirect' ||
-        (response.status >= 300 && response.status < 400);
-
-      if (!isSuccess) {
-        throw new Error('Form submission failed');
-      }
-
-      formMessage.textContent = 'Thanks! Your message has been received.';
-      contactForm.reset();
-    } catch (error) {
-      formMessage.textContent =
-        'Sorry, something went wrong. Please try again.';
-    }
-  });
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('contact') === 'success') {
+    formMessage.textContent = 'Thanks! Your message has been received.';
+    formMessage.dataset.state = 'success';
+    contactForm.reset();
+    window.history.replaceState({}, document.title, `${window.location.pathname}#contact`);
+  }
 }
 
 const lightbox = document.getElementById('lightbox');
