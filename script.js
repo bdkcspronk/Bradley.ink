@@ -11,15 +11,25 @@ if (contactForm && formMessage) {
 
     try {
       const formData = new FormData(contactForm);
+      const formName = contactForm.getAttribute('name');
+      if (formName && !formData.has('form-name')) {
+        formData.append('form-name', formName);
+      }
       const body = new URLSearchParams(formData).toString();
+      const action = contactForm.getAttribute('action') || '/';
 
-      const response = await fetch('/', {
+      const response = await fetch(action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,
       });
 
-      if (!response.ok) {
+      const isSuccess =
+        response.ok ||
+        response.type === 'opaqueredirect' ||
+        (response.status >= 300 && response.status < 400);
+
+      if (!isSuccess) {
         throw new Error('Form submission failed');
       }
 
