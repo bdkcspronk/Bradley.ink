@@ -1,0 +1,16 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' role='img' aria-labelledby='title desc'>
+  <title id='title'>Bradley Ink illustration</title>
+  <desc id='desc'>Stylized illustration portrait with geometric background</desc>
+  <defs>
+    <linearGradient id='bg' x1='0' x2='1' y1='0' y2='1'>
+      <stop offset='0%' stop-color='#dbeafe'/>
+      <stop offset='100%' stop-color='#bfdbfe'/>
+    </linearGradient>
+  </defs>
+  <rect width='400' height='400' fill='url(#bg)' rx='32'/>
+  <circle cx='200' cy='160' r='70' fill='#1e3a8a'/>
+  <rect x='105' y='230' width='190' height='120' rx='48' fill='#1d4ed8'/>
+  <circle cx='170' cy='150' r='10' fill='#e2e8f0'/>
+  <circle cx='230' cy='150' r='10' fill='#e2e8f0'/>
+  <path d='M160 185 Q200 215 240 185' stroke='#e2e8f0' stroke-width='8' fill='none' stroke-linecap='round'/>
+</svg>

@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bradley Ink | Design Portfolio</title>
+    <title>Bradley Ink | 3D & 2D Design Portfolio</title>
     <meta
       name="description"
-      content="Portfolio website for Bradley Ink, a 3D and 2D designer with a background in theoretical physics."
+      content="Bradley Ink creates precision-focused 3D and 2D design work, combining Blender and Illustrator expertise with clear visual strategy."
     />
+    <meta property="og:title" content="Bradley Ink | 3D & 2D Design Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore Bradley Ink's portfolio across 3D design, 2D systems, and visual strategy."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bradley.ink/" />
+    <meta property="og:image" content="https://bradley.ink/assets/thumb-3d.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#">Bradley Ink</a>
-        <nav>
+        <a class="brand" href="#top">Bradley Ink</a>
+        <nav aria-label="Main navigation">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#expertise">Expertise</a></li>
@@ -26,21 +34,23 @@
       </div>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
         <div class="container hero-grid">
           <div>
             <p class="eyebrow">Design Portfolio</p>
             <h1>Precision-driven visual work across 3D and 2D design.</h1>
             <p class="lead">
-              I am Bradley, a 3D designer with 20 years of Blender experience and a
-              2D designer with 10 years of Adobe Illustrator practice. My work blends
-              technical rigor with visual clarity for professional and academic-facing
-              projects.
+              I help brands and teams communicate clearly through high-quality 3D
+              visuals and polished 2D systems, built with a rigorous process and a
+              detail-first approach.
             </p>
-            <a class="btn" href="portfolio.html">View Portfolio</a>
+            <div class="cta-group">
+              <a class="btn" href="portfolio.html">View Portfolio</a>
+              <a class="btn btn-subtle" href="#contact">Contact Me</a>
+            </div>
           </div>
-          <div class="hero-card">
+          <article class="hero-card" aria-label="Profile highlights">
             <h2>Profile Highlights</h2>
             <ul>
               <li>20 years in Blender modeling, shading, and scene development</li>
@@ -48,24 +58,34 @@
               <li>Bachelor's degree in Theoretical Physics</li>
               <li>Approach grounded in structure, detail, and communication</li>
             </ul>
-          </div>
+          </article>
         </div>
       </section>
 
       <section id="about" class="section">
-        <div class="container narrow">
-          <h2>About</h2>
-          <p>
-            I design visual systems that balance creative direction and analytical
-            thinking. Years of production experience in both 3D and 2D workflows have
-            taught me how to deliver polished results while keeping process and
-            communication clear.
-          </p>
-          <p>
-            Whether building a detailed 3D asset set or constructing a crisp vector
-            language, I focus on consistency, intentional hierarchy, and quality of
-            execution from concept to final output.
-          </p>
+        <div class="container about-grid">
+          <div class="about-media">
+            <img
+              src="assets/avatar-illustration.svg"
+              alt="Illustrated portrait representing Bradley Ink"
+              loading="lazy"
+            />
+          </div>
+          <div class="narrow">
+            <h2>About</h2>
+            <p>
+              I design visual systems that balance creative direction with
+              analytical thinking.
+            </p>
+            <p>
+              Across years of production in 3D and 2D workflows, I focus on:
+            </p>
+            <ul>
+              <li>Clear communication from concept to final delivery</li>
+              <li>Consistent visual hierarchy and production quality</li>
+              <li>Reliable execution for professional and academic projects</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -74,25 +94,31 @@
           <h2>Expertise</h2>
           <div class="cards">
             <article class="card">
+              <span class="skill-icon" aria-hidden="true">🧊</span>
               <h3>3D Design</h3>
-              <p>
-                Advanced Blender workflow including modeling, look development,
-                lighting, and scene optimization for presentation-quality output.
-              </p>
+              <ul>
+                <li>Advanced Blender modeling and look development</li>
+                <li>Lighting and scene optimization</li>
+                <li>Presentation-quality rendering workflows</li>
+              </ul>
             </article>
             <article class="card">
+              <span class="skill-icon" aria-hidden="true">✒️</span>
               <h3>2D Design</h3>
-              <p>
-                Adobe Illustrator-based brand graphics, diagrams, and vector artwork
-                created for clarity, scalability, and professional applications.
-              </p>
+              <ul>
+                <li>Illustrator-based branding and vector systems</li>
+                <li>Scalable diagrams and iconography</li>
+                <li>Professional visual consistency across formats</li>
+              </ul>
             </article>
             <article class="card">
+              <span class="skill-icon" aria-hidden="true">🧭</span>
               <h3>Visual Strategy</h3>
-              <p>
-                Conceptual development informed by research, reference analysis, and
-                strong compositional principles to support clear storytelling.
-              </p>
+              <ul>
+                <li>Reference-led concept development</li>
+                <li>Compositional systems for clarity and storytelling</li>
+                <li>Structured iteration and delivery planning</li>
+              </ul>
             </article>
           </div>
         </div>
@@ -102,10 +128,9 @@
         <div class="container narrow">
           <h2>Academic Background</h2>
           <p>
-            I hold a Bachelor's degree in Theoretical Physics, which continues to
-            influence my design methodology. That training sharpened my ability to
-            work with complex systems, abstract structures, and precision-based
-            problem solving.
+            I hold a Bachelor's degree in Theoretical Physics, and I apply that
+            training to design through structured problem-solving, precision, and
+            systems-based thinking.
           </p>
         </div>
       </section>
@@ -114,8 +139,8 @@
         <div class="container narrow portfolio-ref">
           <h2>Selected Work</h2>
           <p>
-            Explore a dedicated portfolio page featuring project categories,
-            production focus, and examples of my 3D and 2D practice.
+            Explore a dedicated portfolio page with project categories, visual
+            previews, and concise summaries of production focus.
           </p>
           <a class="btn btn-subtle" href="portfolio.html">Open Portfolio Page</a>
         </div>
@@ -124,21 +149,32 @@
       <section id="contact" class="section">
         <div class="container">
           <h2>Contact</h2>
-          <form class="contact-form" name="contact" method="POST" data-netlify="true">
+          <form
+            class="contact-form"
+            id="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+          >
             <input type="hidden" name="form-name" value="contact" />
-            <label>
-              Name
-              <input type="text" name="name" required />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="5" required></textarea>
-            </label>
+
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" autocomplete="name" required />
+
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
             <button class="btn" type="submit">Send Message</button>
+            <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
